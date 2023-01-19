@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  position: relative;
+  height: 500vh;
+  width: 100vw;
+}
+/* header */
+.gnb-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Jua', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 30px;
+  background-color: transparent;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-item {
+  text-align: center;
+  border-radius: 5px;
+  height: 35px;
+  width: 100px;
+  line-height: 35px;
+  transition: background-color 400ms ease-in-out;
+}
+
+.gnb-item:hover,
+.gnb-sidemenu-item:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.gnb-sidemenu {
+  display: flex;
+}
+
+.gnb-sidemenu-item {
+  text-align: center;
+  border-radius: 5px;
+  height: 35px;
+  width: 70px;
+  line-height: 35px;
+  transition: background-color 400ms ease-in-out;
+  color: #333;
+}
+
+.logo {
+  height: 20px;
+}
+
+/* main */
+.slide-wrapper {
+  position: absolute;
+  top: 0;
+  z-index: -100;
+}
+
+.slide-item {
+  width: 100vw;
+  height: 100vh;
+  filter: blur(0);
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product{
+  position: fixed;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%,-20%);
+  text-align: center;
+}
+#model{
+  font-size: 2.6em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+#application{
+  border-bottom: 1px solid#333;
+  font-size: 0.9em;
+}
+.order-box{
+  position: fixed;
+  bottom: 125px;
+  left: 50%;
+  transform: translate(-50%,0);
+  display: flex;
+}
+.order-box div{
+  width: 264px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  margin:0 10px;
+  cursor: pointer;
+}
+.order{
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+}
+.detail{
+  background-color: rgba(255, 255, 255, 0.6);
+
+}
+/* footer */
+.fnb-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  transform: rotate(-50%, 0);
+  color: #bbb;
+  width: 100%;
+}
+
+.fotter-top-list {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 13px;
+}
+
+.fotter-top-list li {
+  text-align: center;
+  margin-right: 18px;
+}
+
+.fotter-top-list a {
+  color: #bbb;
+}
+
+.fotter-top-list li:last-child {
+  margin-right: 0;
+}
+
+.fotter-bottom-list {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  width: 600px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+.fotter-bottom-item:before {
+  content: '';
+  width: 1px;
+  height: 10px;
+  background-color: #555;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.fotter-bottom-item:first-child:before {
+  content: none;
+}
+
+/* asisde */
+.sidebar {
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  width: 300px;
+  height: 100vh;
+  padding: 20px 35px;
+  border-left: 1px solid #eee;
+  z-index: 200;
+  transform: translate(300px, 0);
+  transition: transform 300ms ease-in-out;
+}
+
+.sidebar.is-active {
+  transform: translate(0, 0);
+  transition: transform 300ms ease-in-out;
+}
+
+#close-sidebar-btn {
+  float: right;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: background-color 400ms ease-in-out;
+}
+
+#close-sidebar-btn:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.sidebar-list {
+  margin-top: 50px;
+}
+
+.sidebar-item {
+  height: 40px;
+  line-height: 40px;
+  transition: background-color 400ms ease-in-out;
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .3);
+  display: none;
+}
+
+@media screen and (max-width: 1200px){
+  .lg-only{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .sm-hidden{
+    display: none;
+  }
+}
